@@ -1,0 +1,92 @@
+{
+  "_args": [
+    [
+      "@lowes/babel-preset-config@1.2.3",
+      "C:\\Users\\c8921672\\item12\\configurator-ui"
+    ]
+  ],
+  "_development": true,
+  "_from": "@lowes/babel-preset-config@1.2.3",
+  "_id": "@lowes/babel-preset-config@1.2.3",
+  "_inBundle": false,
+  "_integrity": "sha1-us98Bq6ZV2KLkzCj/6dQMP/MK+g=",
+  "_location": "/@lowes/babel-preset-config",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "@lowes/babel-preset-config@1.2.3",
+    "name": "@lowes/babel-preset-config",
+    "escapedName": "@lowes%2fbabel-preset-config",
+    "scope": "@lowes",
+    "rawSpec": "1.2.3",
+    "saveSpec": null,
+    "fetchSpec": "1.2.3"
+  },
+  "_requiredBy": [
+    "#DEV:/"
+  ],
+  "_resolved": "https://artifactory.lowes.com/artifactory/api/npm/ptp-npm-virtual/@lowes/babel-preset-config/-/babel-preset-config-1.2.3.tgz",
+  "_spec": "1.2.3",
+  "_where": "C:\\Users\\c8921672\\item12\\configurator-ui",
+  "dependencies": {
+    "@babel/core": "^7.8.7",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-proposal-decorators": "^7.8.3",
+    "@babel/plugin-proposal-numeric-separator": "^7.8.3",
+    "@babel/plugin-proposal-object-rest-spread": "^7.8.3",
+    "@babel/plugin-proposal-optional-chaining": "^7.8.3",
+    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
+    "@babel/plugin-syntax-import-meta": "^7.8.3",
+    "@babel/plugin-transform-destructuring": "^7.8.8",
+    "@babel/plugin-transform-react-constant-elements": "^7.8.3",
+    "@babel/plugin-transform-react-display-name": "^7.8.3",
+    "@babel/plugin-transform-runtime": "^7.8.3",
+    "@babel/preset-env": "^7.8.7",
+    "@babel/preset-react": "^7.8.3",
+    "@babel/preset-typescript": "^7.8.3",
+    "@babel/runtime": "^7.8.7",
+    "@lowes/babel-plugin-styled-components-namespace": "^0.1.0",
+    "@lowes/browserslist-config-lowes": "^0.4.0",
+    "babel-plugin-dynamic-import-node": "^2.2.0",
+    "babel-plugin-macros": "^2.8.0",
+    "babel-plugin-transform-define": "^2.0.0",
+    "babel-plugin-transform-react-remove-prop-types": "^0.4.24"
+  },
+  "description": "Babel preset for Lowes Web Platform",
+  "devDependencies": {
+    "@lowes/eslint-config": "^1.2.0 ",
+    "@types/babel-plugin-macros": "^2.8.1",
+    "@types/jest": "^25.1.4",
+    "@types/node": "^13.9.3",
+    "babel-plugin-styled-components": "^1.10.7",
+    "eslint": "^6.8.0",
+    "eslint-plugin-import": "^2.20.1",
+    "jest": "^24.9.0",
+    "jsdoc-to-markdown": "^5.0.3",
+    "ts-jest": "^25.2.1",
+    "typescript": "^3.8.3"
+  },
+  "files": [
+    "index.js",
+    "lib"
+  ],
+  "license": "UNLICENSED",
+  "main": "dist/index.js",
+  "name": "@lowes/babel-preset-config",
+  "publishConfig": {
+    "registry": "http://vmlnxbandd.lowes.com/nexus/content/repositories/npm-internal/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@vmlnxatlstash.lowes.com:42000/d-frw/eslint-config-react.git"
+  },
+  "scripts": {
+    "build": "tsc",
+    "coverage": "jest --coverage",
+    "docs": "jsdoc2md lib/*.js lib/**/*.js > API.md",
+    "test": "eslint --fix . && npm run coverage",
+    "unit": "jest"
+  },
+  "version": "1.2.3"
+}

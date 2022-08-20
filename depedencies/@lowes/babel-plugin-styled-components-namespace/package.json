@@ -1,0 +1,85 @@
+{
+  "_args": [
+    [
+      "@lowes/babel-plugin-styled-components-namespace@0.1.0",
+      "C:\\Users\\c8921672\\item12\\configurator-ui"
+    ]
+  ],
+  "_development": true,
+  "_from": "@lowes/babel-plugin-styled-components-namespace@0.1.0",
+  "_id": "@lowes/babel-plugin-styled-components-namespace@0.1.0",
+  "_inBundle": false,
+  "_integrity": "sha1-JRS0t6QDDibHaPP5mgCW/9cwyVA=",
+  "_location": "/@lowes/babel-plugin-styled-components-namespace",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "@lowes/babel-plugin-styled-components-namespace@0.1.0",
+    "name": "@lowes/babel-plugin-styled-components-namespace",
+    "escapedName": "@lowes%2fbabel-plugin-styled-components-namespace",
+    "scope": "@lowes",
+    "rawSpec": "0.1.0",
+    "saveSpec": null,
+    "fetchSpec": "0.1.0"
+  },
+  "_requiredBy": [
+    "/@lowes/babel-preset-config"
+  ],
+  "_resolved": "https://artifactory.lowes.com/artifactory/api/npm/ptp-npm-virtual/@lowes/babel-plugin-styled-components-namespace/-/babel-plugin-styled-components-namespace-0.1.0.tgz",
+  "_spec": "0.1.0",
+  "_where": "C:\\Users\\c8921672\\item12\\configurator-ui",
+  "dependencies": {
+    "@babel/helper-annotate-as-pure": "^7.0.0",
+    "@babel/helper-module-imports": "^7.0.0",
+    "babel-plugin-syntax-jsx": "^6.18.0",
+    "lodash": "^4.17.11"
+  },
+  "description": "Improve the debugging experience and add server-side rendering support to styled-components",
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/preset-env": "^7.4.5",
+    "@lowes/eslint-config": "^1.2.0",
+    "@lowes/eslint-config-react": "^0.8.1",
+    "babel-core": "7.0.0-bridge.0",
+    "babel-plugin-transform-es2015-modules-commonjs": "^6.26.2",
+    "babel-test": "^0.2.1",
+    "jest": "^25.1.0",
+    "jest-file-snapshot": "^0.3.6",
+    "prettier": "^1.18.2",
+    "rimraf": "^3.0.0",
+    "styled-components": "^5.0.0"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "license": "UNLICENSED",
+  "main": "dist/index.js",
+  "name": "@lowes/babel-plugin-styled-components-namespace",
+  "peerDependencies": {
+    "styled-components": ">= 2"
+  },
+  "publishConfig": {
+    "registry": "http://vmlnxbandd.lowes.com/nexus/content/repositories/npm-internal/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@vmlnxatlstash.lowes.com:42000/d-frw/babel-plugin-styled-components.git"
+  },
+  "resolutions": {
+    "babel-core": "7.0.0-bridge.0"
+  },
+  "scripts": {
+    "build": "babel src -d dist",
+    "clean": "rimraf lib",
+    "coverage": "jest --coverage",
+    "prepublish": "npm run clean && npm run build",
+    "style": "prettier --write src/**/*.js",
+    "test": "jest",
+    "test:watch": "npm run test -- --watch",
+    "update-snapshot": "jest --updateSnapshot"
+  },
+  "version": "0.1.0"
+}

@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+  <dimen name="FONT_SIZE_DISPLAY_LG" category="font-size">42sp</dimen>
+  <dimen name="FONT_SIZE_DISPLAY_MD" category="font-size">24sp</dimen>
+  <dimen name="FONT_SIZE_3XL" category="font-size">28sp</dimen>
+  <dimen name="FONT_SIZE_2XL" category="font-size">24sp</dimen>
+  <dimen name="FONT_SIZE_XL" category="font-size">20sp</dimen>
+  <dimen name="FONT_SIZE_LG" category="font-size">16sp</dimen>
+  <dimen name="FONT_SIZE_MD" category="font-size">14sp</dimen>
+  <dimen name="FONT_SIZE_SM" category="font-size">12sp</dimen>
+  <dimen name="FONT_SIZE_XS" category="font-size">12sp</dimen>
+  <dimen name="LINE_HEIGHT_DISPLAY_LG" category="line-height">52sp</dimen>
+  <dimen name="LINE_HEIGHT_DISPLAY_MD" category="line-height">32sp</dimen>
+  <dimen name="LINE_HEIGHT_3XL" category="line-height">36sp</dimen>
+  <dimen name="LINE_HEIGHT_2XL" category="line-height">32sp</dimen>
+  <dimen name="LINE_HEIGHT_XL" category="line-height">28sp</dimen>
+  <dimen name="LINE_HEIGHT_LG" category="line-height">24sp</dimen>
+  <dimen name="LINE_HEIGHT_MD" category="line-height">20sp</dimen>
+  <dimen name="LINE_HEIGHT_SM" category="line-height">16sp</dimen>
+  <dimen name="LINE_HEIGHT_XS" category="line-height">16sp</dimen>
+  <dimen name="SPACING_3XL" category="spacing">48dp</dimen>
+  <dimen name="SPACING_2XL" category="spacing">32dp</dimen>
+  <dimen name="SPACING_XL" category="spacing">24dp</dimen>
+  <dimen name="SPACING_LG" category="spacing">16dp</dimen>
+  <dimen name="SPACING_MD" category="spacing">8dp</dimen>
+  <dimen name="SPACING_SM" category="spacing">4dp</dimen>
+  <dimen name="SPACING_XS" category="spacing">4dp</dimen>
+  <dimen name="ICON_SIZE_XL" category="sizing">40dp</dimen>
+  <dimen name="ICON_SIZE_LG" category="sizing">32dp</dimen>
+  <dimen name="ICON_SIZE_MD" category="sizing">24dp</dimen>
+  <dimen name="ICON_SIZE_SM" category="sizing">16dp</dimen>
+  <dimen name="ICON_SIZE_XS" category="sizing">12dp</dimen>
+  <dimen name="GUTTER_SM" category="gutter">4dp</dimen>
+  <dimen name="GUTTER_MD" category="gutter">8dp</dimen>
+  <dimen name="GUTTER_LG" category="gutter">16dp</dimen>
+  <dimen name="BRD_RADIUS_LG" category="border-radius">8dp</dimen>
+  <dimen name="BRD_RADIUS_SM" category="border-radius">4dp</dimen>
+  <dimen name="BRD_WIDTH_XL" category="border-style">8dp</dimen>
+  <dimen name="BRD_WIDTH_LG" category="border-style">4dp</dimen>
+  <dimen name="BRD_WIDTH_MD" category="border-style">2dp</dimen>
+  <dimen name="BRD_WIDTH_SM" category="border-style">1dp</dimen>
+  <string name="FONT_STACK_1" category="font-family">Roboto Regular</string>
+  <string name="FONT_STACK_2" category="font-family">Roboto Medium</string>
+</resources>

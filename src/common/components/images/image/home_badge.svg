@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="60" height="60" viewBox="0 0 60 60">
+  <defs>
+    <filter id="Ellipse_444" x="0" y="0" width="60" height="60" filterUnits="userSpaceOnUse">
+      <feOffset dy="2" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feFlood flood-opacity="0.322"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Component_1117_566" data-name="Component 1117 – 566" transform="translate(20 18)">
+    <g transform="matrix(1, 0, 0, 1, -20, -18)" filter="url(#Ellipse_444)">
+      <g id="Ellipse_444-2" data-name="Ellipse 444" transform="translate(20 18)" fill="#338700" stroke="#fff" stroke-width="2">
+        <circle cx="10" cy="10" r="10" stroke="none"/>
+        <circle cx="10" cy="10" r="11" fill="none"/>
+      </g>
+    </g>
+    <path id="Icon_ionic-md-home" data-name="Icon ionic-md-home" d="M7.221,13.731V10.654H9.529v3.077h2.346V9.115h1.5l-5-4.615-5,4.615h1.5v4.615Z" transform="translate(1.625 0.885)" fill="#fff"/>
+  </g>
+</svg>

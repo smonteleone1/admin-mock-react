@@ -1,0 +1,21 @@
+{
+  "ci": 
+    {
+      "collect": {
+        "method": "node",
+        "additive": false,                      
+        "headful": false,                             
+        "numberOfRuns": 20,                             
+        "url": [
+          "http://0.0.0.0:22000/withPharos.html",
+          "http://0.0.0.0:23000/withoutPharos.html"
+        ],
+        "startServerCommand": "concurrently \"yarn run startPharosServer\" \"yarn run startServerWithPharos\"  \"yarn run startServerWithoutPharos\"",
+        "settings": {
+          "chromeFlags": "--window-size=1680,900",
+          "emulatedFormFactor": "none",
+          "maxWaitForLoad": 90000
+        }
+      }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "@lowes/create-node-module": {
+    "promptValues": {
+      "authorName": "Framework developers",
+      "authorEmail": "DL-DIST-DIGITAL-FRAMEWORKS@lowes.com"
+    }
+  }
+}

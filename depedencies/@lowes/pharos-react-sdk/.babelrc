@@ -1,0 +1,9 @@
+{
+    "presets": [
+        ["@lowes/config", {
+            "target": "node",
+            "modules": "auto"
+        }]
+    ],
+    "ignore": ["node_modules", "dist"]
+}

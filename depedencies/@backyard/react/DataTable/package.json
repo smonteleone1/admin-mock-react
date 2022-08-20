@@ -1,0 +1,5 @@
+{
+  "sideEffects": false,
+  "module": "../esm/DataTable/index.js",
+  "typings": "./index.d.ts"
+}

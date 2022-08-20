@@ -1,0 +1,19 @@
+{
+  "inventoryInsights": {
+    "headerText": "Inventory Visibility",
+    "stockCloumnHeaders": ["Action", "Item Number", "Node",
+      "Node Type", "Node Elegibility", "Online Availablity", "Node Availablity", "OnHand Inventory"],
+    "stockColumnProperties": ["item", "nodeId", "nodeSubtype", "demand",
+      "ats" , "nodeAvailability", "onHand" ],
+    "sosCloumnHeaders":[ "itemNumber", "modelNumber", "vendorNumber", "node",
+                         "nodeType" , "onHandInventory", "damaged","soldOrReserved",
+                         "nodeAvailability","onlineBuffer",
+                         "onlineAvailability","InTransitDate","InTransitQuantity"],
+    "sosColumnProperties": ["itemNumber", "modelNumber", "vendorNumber", "node",
+                            "nodeType" , "onHandInventory", "damaged","soldOrReserved",
+                             "nodeAvailability","onlineBuffer",
+                            "onlineAvailability","InTransitDate","InTransitQuantity"]
+
+  }
+}
+

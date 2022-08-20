@@ -1,0 +1,5 @@
+{
+  "sideEffects": false,
+  "module": "../esm/DatePickerNative/index.js",
+  "typings": "./index.d.ts"
+}

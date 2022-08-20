@@ -1,0 +1,343 @@
+[
+    {
+        "node": null,
+        "fulfillmentTypeCode": 3,
+        "fullFillmentType": {
+            "fulfillmentTypeCode": 3,
+            "shortDescription": "DELIVERY"
+        },
+        "fulfillmentTypeEligibity": false,
+        "fulfillmentTypeEnabled": false,
+        "fulfillmentTypeInactiveStartDate": null,
+        "fulfillmentTypeInactiveEndDate": null,
+        "rulesActive": true,
+        "rulesInactiveStartDate": null,
+        "rulesInactiveEndDate": null,
+        "rollOverDays": null,
+        "nodeKillAtMaxDays": null,
+        "updateDateTimeStamp": "06-27-2022 06:52:34",
+        "nodeSourcingRules": [
+            {
+                "node": null,
+                "fulfillmentTypeCode": 4,
+                "ruleTypeCode": 5,
+                "ruleType": {
+                    "ruleTypeCode": 5,
+                    "shortDescription": "HW"
+                },
+                "ruleActive": false,
+                "ruleInactiveStartTime": null,
+                "ruleInactiveEndTime": null,
+                "sourcingValue": "",
+                "oldHazmatCode": null,
+                "hazmatCode": ""
+            },
+            {
+                "node": null,
+                "fulfillmentTypeCode": 4,
+                "ruleTypeCode": 2,
+                "ruleType": {
+                    "ruleTypeCode": 2,
+                    "shortDescription": "HZ"
+                },
+                "ruleActive": false,
+                "ruleInactiveStartTime": null,
+                "ruleInactiveEndTime": null,
+                "sourcingValue": "A,E,F,G,H,J,B,C,D,I,L,M,S,T,Q,K,O,R,U,P,V,W",
+                "oldHazmatCode": null,
+                "hazmatCode": ""
+            }
+        ],
+        "nodeCapacity": [],
+        "lead_time_details": {
+                "nodeBuffer": 0, 
+                "orderEndTime": "15:00", 
+                "receivingDays": "Mon Tue Wed Thu", 
+                "endOffsetValue": 60, 
+                "nodeBufferDays": 0, 
+                "orderStartTime": "06:00", 
+                "processingTime": 360, 
+                "startOffsetValue": 60, 
+                "bossProcessingTime": 1440
+        }
+    },
+    {
+        "node": null,
+        "fulfillmentTypeCode": 4,
+        "fullFillmentType": {
+            "fulfillmentTypeCode": 4,
+            "shortDescription": "PARCEL"
+        },
+        "fulfillmentTypeEligibity": false,
+        "fulfillmentTypeEnabled": false,
+        "fulfillmentTypeInactiveStartDate": null,
+        "fulfillmentTypeInactiveEndDate": null,
+        "rulesActive": true,
+        "rulesInactiveStartDate": null,
+        "rulesInactiveEndDate": null,
+        "rollOverDays": null,
+        "nodeKillAtMaxDays": null,
+        "updateDateTimeStamp": "06-27-2022 06:44:43",
+        "nodeSourcingRules": [
+            {
+                "node": null,
+                "fulfillmentTypeCode": 4,
+                "ruleTypeCode": 5,
+                "ruleType": {
+                    "ruleTypeCode": 5,
+                    "shortDescription": "HW"
+                },
+                "ruleActive": false,
+                "ruleInactiveStartTime": null,
+                "ruleInactiveEndTime": null,
+                "sourcingValue": "",
+                "oldHazmatCode": null,
+                "hazmatCode": ""
+            },
+            {
+                "node": null,
+                "fulfillmentTypeCode": 4,
+                "ruleTypeCode": 3,
+                "ruleType": {
+                    "ruleTypeCode": 3,
+                    "shortDescription": "LTL"
+                },
+                "ruleActive": false,
+                "ruleInactiveStartTime": null,
+                "ruleInactiveEndTime": null,
+                "sourcingValue": "Y",
+                "oldHazmatCode": null,
+                "hazmatCode": ""
+            },
+            {
+                "node": null,
+                "fulfillmentTypeCode": 4,
+                "ruleTypeCode": 2,
+                "ruleType": {
+                    "ruleTypeCode": 2,
+                    "shortDescription": "HZ"
+                },
+                "ruleActive": false,
+                "ruleInactiveStartTime": null,
+                "ruleInactiveEndTime": null,
+                "sourcingValue": "A,E,F,G,H,J,B,C,D,I,L,M,S,T,Q,K,O,R,U,P,V,W",
+                "oldHazmatCode": null,
+                "hazmatCode": ""
+            },
+            {
+                "node": null,
+                "fulfillmentTypeCode": 4,
+                "ruleTypeCode": 8,
+                "ruleType": {
+                    "ruleTypeCode": 8,
+                    "shortDescription": "Region"
+                },
+                "ruleActive": false,
+                "ruleInactiveStartTime": null,
+                "ruleInactiveEndTime": null,
+                "sourcingValue": "",
+                "oldHazmatCode": null,
+                "hazmatCode": ""
+            }
+        ],
+        "nodeCapacity": [
+            {
+                "node": null,
+                "fulfillmentTypeCode": 4,
+                "workingDayCode": 2,
+                "workingDayEntity": {
+                    "workingDayCode": 2,
+                    "description": "TUESDAY"
+                },
+                "capacity": 0,
+                "cutoffTime": "18:30"
+            },
+            {
+                "node": null,
+                "fulfillmentTypeCode": 4,
+                "workingDayCode": 5,
+                "workingDayEntity": {
+                    "workingDayCode": 5,
+                    "description": "FRIDAY"
+                },
+                "capacity": 0,
+                "cutoffTime": "18:30"
+            },
+            {
+                "node": null,
+                "fulfillmentTypeCode": 4,
+                "workingDayCode": 7,
+                "workingDayEntity": {
+                    "workingDayCode": 7,
+                    "description": "SUNDAY"
+                },
+                "capacity": 0,
+                "cutoffTime": "18:30"
+            },
+            {
+                "node": null,
+                "fulfillmentTypeCode": 4,
+                "workingDayCode": 1,
+                "workingDayEntity": {
+                    "workingDayCode": 1,
+                    "description": "MONDAY"
+                },
+                "capacity": 0,
+                "cutoffTime": "18:30"
+            },
+            {
+                "node": null,
+                "fulfillmentTypeCode": 4,
+                "workingDayCode": 3,
+                "workingDayEntity": {
+                    "workingDayCode": 3,
+                    "description": "WEDNESDAY"
+                },
+                "capacity": 0,
+                "cutoffTime": "18:30"
+            },
+            {
+                "node": null,
+                "fulfillmentTypeCode": 4,
+                "workingDayCode": 4,
+                "workingDayEntity": {
+                    "workingDayCode": 4,
+                    "description": "THURSDAY"
+                },
+                "capacity": 0,
+                "cutoffTime": "18:30"
+            },
+            {
+                "node": null,
+                "fulfillmentTypeCode": 4,
+                "workingDayCode": 6,
+                "workingDayEntity": {
+                    "workingDayCode": 6,
+                    "description": "SATURDAY"
+                },
+                "capacity": 0,
+                "cutoffTime": "18:30"
+            }
+        ],
+        "lead_time_details": {
+            "orderEndTime": "15:00", 
+            "nodeBufferDays": 1, 
+            "orderStartTime": "06:00", 
+            "processingTime": 0, 
+            "processingTimeUOM": "HOURS"
+        }      
+    },
+    {
+        "node": null,
+        "fulfillmentTypeCode": 2,
+        "fullFillmentType": {
+            "fulfillmentTypeCode": 2,
+            "shortDescription": "PUIS"
+        },
+        "fulfillmentTypeEligibity": false,
+        "fulfillmentTypeEnabled": false,
+        "fulfillmentTypeInactiveStartDate": null,
+        "fulfillmentTypeInactiveEndDate": null,
+        "rulesActive": true,
+        "rulesInactiveStartDate": null,
+        "rulesInactiveEndDate": null,
+        "rollOverDays": null,
+        "nodeKillAtMaxDays": null,
+        "updateDateTimeStamp": "06-27-2022 06:52:34",
+        "nodeSourcingRules": [
+            {
+                "node": null,
+                "fulfillmentTypeCode": 4,
+                "ruleTypeCode": 5,
+                "ruleType": {
+                    "ruleTypeCode": 5,
+                    "shortDescription": "HW"
+                },
+                "ruleActive": false,
+                "ruleInactiveStartTime": null,
+                "ruleInactiveEndTime": null,
+                "sourcingValue": "",
+                "oldHazmatCode": null,
+                "hazmatCode": ""
+            },
+            {
+                "node": null,
+                "fulfillmentTypeCode": 4,
+                "ruleTypeCode": 2,
+                "ruleType": {
+                    "ruleTypeCode": 2,
+                    "shortDescription": "HZ"
+                },
+                "ruleActive": false,
+                "ruleInactiveStartTime": null,
+                "ruleInactiveEndTime": null,
+                "sourcingValue": "A,E,F,G,H,J,B,C,D,I,L,M,S,T,Q,K,O,R,U,P,V,W",
+                "oldHazmatCode": null,
+                "hazmatCode": ""
+            }
+        ],
+        "nodeCapacity": [],
+        "lead_time_details": {
+            "nodeBuffer": 0, 
+            "orderEndTime": "18:30", 
+            "nodeBufferUOM": "MINUTES", 
+            "receivingDays": "Mon Tue Wed Thu", 
+            "endOffsetValue": 0, 
+            "nodeBufferDays": 0, 
+            "orderStartTime": "06:00", 
+            "processingTime": 360, 
+            "startOffsetValue": 0, 
+            "processingTimeUOM": "MINUTES", 
+            "bossProcessingTime": 1440
+        }
+    },
+    {
+        "node": null,
+        "fulfillmentTypeCode": 5,
+        "fullFillmentType": {
+            "fulfillmentTypeCode": 5,
+            "shortDescription": "LTL"
+        },
+        "fulfillmentTypeEligibity": false,
+        "fulfillmentTypeEnabled": false,
+        "fulfillmentTypeInactiveStartDate": null,
+        "fulfillmentTypeInactiveEndDate": null,
+        "rulesActive": true,
+        "rulesInactiveStartDate": null,
+        "rulesInactiveEndDate": null,
+        "rollOverDays": null,
+        "nodeKillAtMaxDays": null,
+        "updateDateTimeStamp": "06-27-2022 06:52:34",
+        "nodeSourcingRules": [
+            {
+                "node": null,
+                "fulfillmentTypeCode": 5,
+                "ruleTypeCode": 8,
+                "ruleType": {
+                    "ruleTypeCode": 8,
+                    "shortDescription": "Region"
+                },
+                "ruleActive": false,
+                "ruleInactiveStartTime": null,
+                "ruleInactiveEndTime": null,
+                "sourcingValue": "",
+                "oldHazmatCode": null,
+                "hazmatCode": ""
+            }
+        ],
+        "nodeCapacity": [],
+        "lead_time_details": {
+            "nodeBuffer": 0, 
+            "orderEndTime": "18:30", 
+            "nodeBufferUOM": "MINUTES", 
+            "receivingDays": "Mon Tue Wed Thu", 
+            "endOffsetValue": 0, 
+            "nodeBufferDays": 0, 
+            "orderStartTime": "06:00", 
+            "processingTime": 360, 
+            "startOffsetValue": 0, 
+            "processingTimeUOM": "MINUTES", 
+            "bossProcessingTime": 1440
+        }
+    }
+]

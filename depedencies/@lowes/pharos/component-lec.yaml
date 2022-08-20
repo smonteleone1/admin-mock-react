@@ -1,0 +1,41 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: pharos
+  description: Real User Monitoring tool, aims to capture application performance, component performance and errors.
+  tags:
+    - react
+  links:
+    - url: https://tools.lowes.com/stash/projects/D-FRW/repos/pharos/browse
+      title: Pharos Repo
+      icon: github
+    - url: https://dev.carbon.lowes.com/framework/pharos/docs/#/installation/gettingStarted
+      title: Documentation
+      icon: help
+    - url: https://vmlnxjenkinsmaster01.lowes.com/job/Framework/job/pharos/
+      title: Jenkins
+      icon: alert
+    - url: https://tools.lowes.com/confluence/display/FMW/Pharos+Dashboard
+      title: Jira
+      icon: jira
+  information:
+      Portfolio: Enterprise Architecture
+      Application Name: Pharos
+      Team Name: Team Pharos
+      Product Manager: Vivek Jaiswal
+      SEM: Anil Singh
+      Service Tier: Tier 3
+      Type: service
+      Namespace: pharos
+  annotations:
+    sonarqube.org/project-key: 'd-frw/pharos'
+    jenkins.io/github-folder: 'Framework/pharos'
+    backstage.io/techdocs-ref: 'url:https://tools.lowes.com/stash/projects/D-FRW/repos/lowes-backstage-catalog/browse/pharos/pharos-component.yaml'
+    backstage.io/kubernetes-label-selector: 'gke-cluster=gcp-ushi-carbon-svcs-dev-carbon-us-east4-app-graphite'
+    jira/project-key: 'FRAM'
+    jira/team-key: '1219'
+spec:
+  type: website
+  lifecycle: production
+  owner: team-pharos
+  system: ea-products

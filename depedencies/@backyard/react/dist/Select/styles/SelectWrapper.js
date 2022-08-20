@@ -1,0 +1,24 @@
+"use strict";
+
+var _interopRequireDefault = require("@babel/runtime/helpers/interopRequireDefault");
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports["default"] = exports.SelectWrapper = void 0;
+
+var _styledComponents = _interopRequireDefault(require("styled-components"));
+
+var _Stacked = _interopRequireDefault(require("./Stacked"));
+
+var SelectWrapper = _styledComponents["default"].div.withConfig({
+  displayName: "SelectWrapper",
+  componentId: "sc-dtebh5-0"
+})(["border:none;display:flex;flex-direction:column;vertical-align:top;padding:0;position:relative;select,legend,label,span,.suffix{font-family:", ";font-weight:var(--bds-font-weight-regular);font-size:var(--bds-sizes-size-16);line-height:var(--bds-sizes-size-24);color:var(--bds-color-text-primary);}svg{box-sizing:border-box;}select{box-sizing:border-box;border:none;outline:none;width:100%;height:100%;padding-left:var(--bds-sizes-size-16);padding-right:var(--bds-sizes-size-40);appearance:none;background-color:transparent;}&.item--before{select{padding-left:var(--bds-sizes-size-40);}}.item--before{position:absolute;top:var(--bds-sizes-size-16);left:var(--bds-sizes-size-16);}.item--after{position:absolute;top:var(--bds-sizes-size-16);right:var(--bds-sizes-size-16);}&.size--small .item--after,&.size--small .item--before{top:var(--bds-sizes-size-14);}&.size--large .item--after,&.size--large .item--before{top:var(--bds-sizes-size-20);}&.size--jumbo .item--after,&.size--jumbo .item--before{top:1.375rem;}&.state--error svg.item--after path{fill:var(--bds-color-icon-red);}&.has--placeholder{label{display:none;}legend{display:none;}}&.stacked{", "}"], function (_ref) {
+  var theme = _ref.theme;
+  return theme.font.family[theme.context.font];
+}, _Stacked["default"]);
+
+exports.SelectWrapper = SelectWrapper;
+var _default = SelectWrapper;
+exports["default"] = _default;

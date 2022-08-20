@@ -1,0 +1,261 @@
+{
+  "properties": [
+    {
+      "category": "font-size",
+      "type": "size",
+      "name": "fontSizeDisplayLg",
+      "value": "42pt"
+    },
+    {
+      "category": "font-size",
+      "type": "size",
+      "name": "fontSizeDisplayMd",
+      "value": "24pt"
+    },
+    {
+      "category": "font-size",
+      "type": "size",
+      "name": "fontSize3Xl",
+      "value": "28pt"
+    },
+    {
+      "category": "font-size",
+      "type": "size",
+      "name": "fontSize2Xl",
+      "value": "24pt"
+    },
+    {
+      "category": "font-size",
+      "type": "size",
+      "name": "fontSizeXl",
+      "value": "20pt"
+    },
+    {
+      "category": "font-size",
+      "type": "size",
+      "name": "fontSizeLg",
+      "value": "16pt"
+    },
+    {
+      "category": "font-size",
+      "type": "size",
+      "name": "fontSizeMd",
+      "value": "14pt"
+    },
+    {
+      "category": "font-size",
+      "type": "size",
+      "name": "fontSizeSm",
+      "value": "12pt"
+    },
+    {
+      "category": "font-size",
+      "type": "size",
+      "name": "fontSizeXs",
+      "value": "12pt"
+    },
+    {
+      "category": "line-height",
+      "type": "size",
+      "name": "lineHeightDisplayLg",
+      "value": "52pt"
+    },
+    {
+      "category": "line-height",
+      "type": "size",
+      "name": "lineHeightDisplayMd",
+      "value": "32pt"
+    },
+    {
+      "category": "line-height",
+      "type": "size",
+      "name": "lineHeight3Xl",
+      "value": "36pt"
+    },
+    {
+      "category": "line-height",
+      "type": "size",
+      "name": "lineHeight2Xl",
+      "value": "32pt"
+    },
+    {
+      "category": "line-height",
+      "type": "size",
+      "name": "lineHeightXl",
+      "value": "28pt"
+    },
+    {
+      "category": "line-height",
+      "type": "size",
+      "name": "lineHeightLg",
+      "value": "24pt"
+    },
+    {
+      "category": "line-height",
+      "type": "size",
+      "name": "lineHeightMd",
+      "value": "20pt"
+    },
+    {
+      "category": "line-height",
+      "type": "size",
+      "name": "lineHeightSm",
+      "value": "16pt"
+    },
+    {
+      "category": "line-height",
+      "type": "size",
+      "name": "lineHeightXs",
+      "value": "16pt"
+    },
+    {
+      "category": "spacing",
+      "type": "size",
+      "name": "spacing3Xl",
+      "value": "48pt"
+    },
+    {
+      "category": "spacing",
+      "type": "size",
+      "name": "spacing2Xl",
+      "value": "32pt"
+    },
+    {
+      "category": "spacing",
+      "type": "size",
+      "name": "spacingXl",
+      "value": "24pt"
+    },
+    {
+      "category": "spacing",
+      "type": "size",
+      "name": "spacingLg",
+      "value": "16pt"
+    },
+    {
+      "category": "spacing",
+      "type": "size",
+      "name": "spacingMd",
+      "value": "8pt"
+    },
+    {
+      "category": "spacing",
+      "type": "size",
+      "name": "spacingSm",
+      "value": "4pt"
+    },
+    {
+      "category": "spacing",
+      "type": "size",
+      "name": "spacingXs",
+      "value": "4pt"
+    },
+    {
+      "category": "sizing",
+      "type": "size",
+      "name": "iconSizeXl",
+      "value": "40pt",
+      "subcategory": "icon-sizes"
+    },
+    {
+      "category": "sizing",
+      "type": "size",
+      "name": "iconSizeLg",
+      "value": "32pt",
+      "subcategory": "icon-sizes"
+    },
+    {
+      "category": "sizing",
+      "type": "size",
+      "name": "iconSizeMd",
+      "value": "24pt",
+      "subcategory": "icon-sizes"
+    },
+    {
+      "category": "sizing",
+      "type": "size",
+      "name": "iconSizeSm",
+      "value": "16pt",
+      "subcategory": "icon-sizes"
+    },
+    {
+      "category": "sizing",
+      "type": "size",
+      "name": "iconSizeXs",
+      "value": "12pt",
+      "subcategory": "icon-sizes"
+    },
+    {
+      "category": "gutter",
+      "type": "size",
+      "name": "gutterSm",
+      "value": "4pt"
+    },
+    {
+      "category": "gutter",
+      "type": "size",
+      "name": "gutterMd",
+      "value": "8pt"
+    },
+    {
+      "category": "gutter",
+      "type": "size",
+      "name": "gutterLg",
+      "value": "16pt"
+    },
+    {
+      "category": "border-radius",
+      "type": "size",
+      "name": "brdRadiusLg",
+      "value": "8pt"
+    },
+    {
+      "category": "border-radius",
+      "type": "size",
+      "name": "brdRadiusSm",
+      "value": "4pt"
+    },
+    {
+      "category": "border-style",
+      "subcategory": "border-width",
+      "type": "size",
+      "name": "brdWidthXl",
+      "value": "8pt"
+    },
+    {
+      "category": "border-style",
+      "subcategory": "border-width",
+      "type": "size",
+      "name": "brdWidthLg",
+      "value": "4pt"
+    },
+    {
+      "category": "border-style",
+      "subcategory": "border-width",
+      "type": "size",
+      "name": "brdWidthMd",
+      "value": "2pt"
+    },
+    {
+      "category": "border-style",
+      "subcategory": "border-width",
+      "type": "size",
+      "name": "brdWidthSm",
+      "value": "1pt"
+    },
+    {
+      "category": "font-family",
+      "subcategory": "font-stacks",
+      "type": "font",
+      "name": "fontStack1",
+      "value": "San Fransisco Pro Display"
+    },
+    {
+      "category": "font-family",
+      "subcategory": "font-stacks",
+      "type": "font",
+      "name": "fontStack2",
+      "value": "San Fransisco Pro Text"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="72" height="60" viewBox="0 0 72 60">
+  <defs>
+    <filter id="Highlight" x="3" y="3" width="66" height="54" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="selected_node" x="0" y="0" width="72" height="60" filterUnits="userSpaceOnUse">
+      <feOffset dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="6" result="blur-2"/>
+      <feFlood flood-opacity="0.322"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="selected_node_focused" transform="translate(-900 -802)">
+    <g transform="matrix(1, 0, 0, 1, 900, 802)" filter="url(#Highlight)">
+      <rect id="Highlight-2" data-name="Highlight" width="42" height="30" rx="15" transform="translate(15 12)" fill="rgba(0,0,0,0)" stroke="rgba(0,65,194,0.4)" stroke-width="6"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, 900, 802)" filter="url(#selected_node)">
+      <g id="selected_node-2" data-name="selected_node" transform="translate(20 17)" fill="#0041c2" stroke="#fff" stroke-width="2">
+        <rect width="32" height="20" rx="10" stroke="none"/>
+        <rect x="-1" y="-1" width="34" height="22" rx="11" fill="none"/>
+      </g>
+    </g>
+  </g>
+</svg>

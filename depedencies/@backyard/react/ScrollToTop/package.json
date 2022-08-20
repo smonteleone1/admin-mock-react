@@ -1,0 +1,5 @@
+{
+  "sideEffects": false,
+  "module": "../esm/ScrollToTop/index.js",
+  "typings": "./index.d.ts"
+}

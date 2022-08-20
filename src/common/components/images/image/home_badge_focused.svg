@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="52" height="52" viewBox="0 0 52 52">
+  <defs>
+    <filter id="Highlight" x="0" y="0" width="52" height="52" filterUnits="userSpaceOnUse">
+      <feOffset dy="2" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Ellipse_444" x="6.001" y="5.902" width="40" height="40" filterUnits="userSpaceOnUse">
+      <feOffset dy="2" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-2"/>
+      <feFlood flood-opacity="0.502"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="home_badge_focused" transform="translate(-395.5 -1333.098)">
+    <g transform="matrix(1, 0, 0, 1, 395.5, 1333.1)" filter="url(#Highlight)">
+      <circle id="Highlight-2" data-name="Highlight" cx="14" cy="14" r="14" transform="translate(12 10)" fill="none" stroke="rgba(51,135,0,0.4)" stroke-width="6"/>
+    </g>
+    <g id="Home" transform="translate(-839.499 792)">
+      <g id="Component_1117_587" data-name="Component 1117 – 587" transform="translate(1252 556)">
+        <g transform="matrix(1, 0, 0, 1, -17, -14.9)" filter="url(#Ellipse_444)">
+          <g id="Ellipse_444-2" data-name="Ellipse 444" transform="translate(17 14.9)" fill="#338700" stroke="#fff" stroke-width="2">
+            <circle cx="9" cy="9" r="9" stroke="none"/>
+            <circle cx="9" cy="9" r="10" fill="none"/>
+          </g>
+        </g>
+        <path id="Icon_ionic-md-home" data-name="Icon ionic-md-home" d="M7.221,13.731V10.654H9.529v3.077h2.346V9.115h1.5l-5-4.615-5,4.615h1.5v4.615Z" transform="translate(0.625 -0.115)" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>

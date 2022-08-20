@@ -1,0 +1,95 @@
+{
+
+    "itemInvDetails": [
+        {
+            "itemNumber": "123",
+            "modelNumber": 17197,
+            "vendorNumber": "LIGHT BULBS-SPECIALTY",
+            "node": 0,
+            "nodeType": "DFC",
+            "onHandInventory": 0,
+            "damaged": 0,
+            "soldOrReserved": 0,
+            "nodeAvailability": 0,
+            "onlineBuffer": 0,
+            "onlineAvailability": 0,
+            "InTransitDate": 0,
+            "InTransitQuantity": 0
+        },
+        {
+            "itemNumber": "123",
+            "modelNumber": 17197,
+            "vendorNumber": "LIGHT BULBS-SPECIALTY",
+            "node": 0,
+            "nodeType": "DFC",
+            "onHandInventory": 0,
+            "damaged": 0,
+            "soldOrReserved": 0,
+            "nodeAvailability": 0,
+            "onlineBuffer": 0,
+            "onlineAvailability": 0,
+            "InTransitDate": 0,
+            "InTransitQuantity": 0
+        },
+        {
+            "itemNumber": "123",
+            "modelNumber": 17197,
+            "vendorNumber": "LIGHT BULBS-SPECIALTY",
+            "node": 0,
+            "nodeType": "DFC",
+            "onHandInventory": 0,
+            "damaged": 0,
+            "soldOrReserved": 0,
+            "nodeAvailability": 0,
+            "onlineBuffer": 0,
+            "onlineAvailability": 0,
+            "InTransitDate": 0,
+            "InTransitQuantity": 0
+        },
+        {
+            "itemNumber": "123",
+            "modelNumber": 17197,
+            "vendorNumber": "LIGHT BULBS-SPECIALTY",
+            "node": 0,
+            "nodeType": "DFC",
+            "onHandInventory": 0,
+            "damaged": 0,
+            "soldOrReserved": 0,
+            "nodeAvailability": 0,
+            "onlineBuffer": 0,
+            "onlineAvailability": 0,
+            "InTransitDate": 0,
+            "InTransitQuantity": 0
+        },
+        {
+            "itemNumber": "123",
+            "modelNumber": 17197,
+            "vendorNumber": "LIGHT BULBS-SPECIALTY",
+            "node": 0,
+            "nodeType": "DFC",
+            "onHandInventory": 0,
+            "damaged": 0,
+            "soldOrReserved": 0,
+            "nodeAvailability": 0,
+            "onlineBuffer": 0,
+            "onlineAvailability": 0,
+            "InTransitDate": 0,
+            "InTransitQuantity": 0
+        },
+        {
+            "itemNumber": "123",
+            "modelNumber": 17197,
+            "vendorNumber": "LIGHT BULBS-SPECIALTY",
+            "node": 0,
+            "nodeType": "DFC",
+            "onHandInventory": 0,
+            "damaged": 0,
+            "soldOrReserved": 0,
+            "nodeAvailability": 0,
+            "onlineBuffer": 0,
+            "onlineAvailability": 0,
+            "InTransitDate": 0,
+            "InTransitQuantity": 0
+        }
+    ]
+}

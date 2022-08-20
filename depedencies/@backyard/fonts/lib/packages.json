@@ -1,0 +1,7 @@
+{
+  "name": "@backyard/fonts-lib",
+  "version": "0.0.0",
+  "private": true,
+  "description": "Private fonts for backyard design system",
+  "main": "./index.js"
+}

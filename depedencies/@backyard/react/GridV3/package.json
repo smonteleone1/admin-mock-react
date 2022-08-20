@@ -1,0 +1,5 @@
+{
+  "sideEffects": false,
+  "module": "../esm/GridV3/index.js",
+  "typings": "./index.d.ts"
+}

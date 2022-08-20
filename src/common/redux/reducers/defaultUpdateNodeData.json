@@ -1,0 +1,63 @@
+{
+    "node": null,
+    "isNodeActive": true,
+    "nodeType": {
+        "nodeTypeCode": null,
+        "shortDescription": ""
+    },
+    "nodeSubType": {
+        "nodeSubTypeCode": null,
+        "shortDescription": ""
+    },
+    "latitude": null,
+    "longitude": null,
+    "deliveryDriveMiles": 0,
+    "zipcode": "",
+    "city": "",
+    "state": "",
+    "countryCode": "",
+    "capacityUOM": "orders",
+    "valueAddedService": "",
+    "nodeKillAtMaxFinRollover": true,
+    "nodeKillMaxFinDays": 7,
+    "supportedTruckType": [],
+    "supportedCarrierName": [],
+    "supportedCarriersrvcLvl": [],
+    "supported_TransportMode": [
+        "RGL"
+    ],
+    "supportedTransportMode": [],
+    "workingDays": [
+        "Mon:6_10",
+        "Tue:6_10",
+        "Wed:6_10",
+        "Thu:6_10",
+        "Fri:6_10",
+        "Sat:6_10",
+        "Sun:6_10"
+    ],
+    "processingTime": 0,
+    "timeZoneOffset": "",
+    "nodeHoliday": [],
+    "nodeReceivingDays": 1,
+    "orderStartTime": "06:00",
+    "orderCutoffTime": "15:00",
+    "timeZone": "",
+    "nodeProcessingCost": 0,
+    "nodeProcessingWeight": 100,
+    "outboundTransportationWeight": 100,
+    "nodeBufferDays": 1,
+    "address": "",
+    "receiptProcessingDays": 3,
+    "leadTimeInfo": {},
+    "carrier": {},
+    "region": "",
+    "district": "",
+    "costLevers": {
+        "PARCEL": {
+            "processingCost": 7.32,
+            "processingWeight": 1.0,
+            "outboundTransportationWeight": 1.0
+        }
+    }
+}

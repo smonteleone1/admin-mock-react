@@ -1,0 +1,5 @@
+{
+  "sideEffects": false,
+  "module": "../esm/Multiselect/index.js",
+  "typings": "./index.d.ts"
+}

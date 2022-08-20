@@ -1,0 +1,5 @@
+{
+  "sideEffects": false,
+  "module": "../esm/OrderedList/index.js",
+  "typings": "./index.d.ts"
+}
