@@ -24,6 +24,7 @@ const Card = (props) => {
 					nodeHoliday={ props.nodeHoliday }
 					addNodeHoliday={ props.addNodeHoliday }
 					removeNodeHoliday = { props.removeNodeHoliday }
+					updateNodeHoliday={props.updateNodeHoliday}
 				/>
 			</section>
 			<section>

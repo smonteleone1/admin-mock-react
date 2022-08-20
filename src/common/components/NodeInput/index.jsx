@@ -184,6 +184,11 @@ const NodeInput = () => {
 		setNodeHolidays([...nodeHolidays]);
 	}
 
+	const updateNodeHoliday = (index,value) => {
+		//nodeHolidays.splice(index, 1);
+		setNodeHolidays([...nodeHolidays]);
+	}
+
 	return (
 		<div>
 			{isRequest && <Spinner show invisible />}
@@ -223,6 +228,7 @@ const NodeInput = () => {
 					nodeHoliday={nodeHolidays}
 					addNodeHoliday={addNodeHoliday}
 					removeNodeHoliday={removeNodeHoliday}
+					updateNodeHoliday={updateNodeHoliday}
 					srvcLvl={supportedCarriersrvcLvl}
 				/>
 			</div>

@@ -64,7 +64,7 @@ function Holidays(props) {
 
 	const handleDateChange = (e, index) => {
 		const { value } = e.target;
-		props.addNodeHoliday(index, value);
+		props.updateNodeHoliday(index, value);
 	};
 
 	return (
