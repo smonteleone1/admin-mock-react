@@ -175,13 +175,13 @@ const NodeInput = () => {
 		setNodeSubTypeState(nodeSubType)
 	};
 
-	const addNodeHoliday = (e) => {
-		const nodeHoliday = new Date();
-		setNodeHolidays([nodeHoliday]);
+	const addNodeHoliday = (holidays) => {
+		setNodeHolidays(holidays);
 	}
 
-	const removeNodeHoliday = (e) => {
-		setNodeHolidays([]);
+	const removeNodeHoliday = (index) => {
+		nodeHolidays.splice(index, 1);
+		setNodeHolidays([...nodeHolidays]);
 	}
 
 	return (

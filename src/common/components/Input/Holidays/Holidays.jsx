@@ -48,25 +48,23 @@ const styles = {
 
 function Holidays(props) {
 
-	const structureDate = (holiday) => {		
-		return moment(new Date()).format("YYYY-DD-MM")
+	const formatDate = (holiday) => {		
+		const formatedDate =  moment(new Date()).format("YYYY-MM-DD").toString();
+		return formatedDate;
 	};
 	
 
 	const handleDateAdd = () => {
-		props.addNodeHoliday([...props.nodeHoliday, '']);
+		props.addNodeHoliday([...props.nodeHoliday, new Date()]);
 	};
 
 	const handleDateRemove = (index) => {
-		const list = [...props.nodeHoliday];
-		list.splice(index, 1);
-		props.removeNodeHoliday(list);
+		props.removeNodeHoliday(index);
 	};
 
 	const handleDateChange = (e, index) => {
 		const { value } = e.target;
-		const list = [...props.nodeHoliday, value];
-		props.addNodeHoliday(list);
+		props.addNodeHoliday(index, value);
 	};
 
 	return (
@@ -92,7 +90,7 @@ function Holidays(props) {
 						<div>
 							<input
 								// value={ date.date }
-								value={ structureDate(date) }
+								value={ formatDate(date) }
 								onChange={ (e) => handleDateChange(e, index) }
 								type="date"
 								style={ styles.border }
