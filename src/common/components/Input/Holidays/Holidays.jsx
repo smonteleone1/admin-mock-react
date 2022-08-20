@@ -1,8 +1,10 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 // import { TextField } from '@backyard/react';
 import DeleteIcon from '@mui/icons-material/Delete';
 import Icon from '@mui/material/Icon';
 import { useSelector } from 'react-redux';
+import moment from 'moment'
+
 
 const styles = {
 	section: {
@@ -46,48 +48,24 @@ const styles = {
 
 function Holidays(props) {
 
-	const nodeFormData = useSelector((s) => {
-		return s.nodeFormData;
-	});
-
-	const structureDate = (arr) => {
-		const words = arr.split('-');
-		if (words[0].length === 4) {
-			return arr;
-		}
-		const first = words[0];
-		const second = words[1];
-		const third = words[2];
-		const temp = `${third}-${first}-${second}`;
-
-		return temp;
+	const structureDate = (holiday) => {		
+		return moment(new Date()).format("YYYY-DD-MM")
 	};
-
-	const structureDate2 = (word) => {
-		const words = word.split('-');
-		const first = words[0];
-		const second = words[1];
-		const third = words[2];
-		const temp = `${second}-${third}-${first}`;
-		return temp;
-	};
+	
 
 	const handleDateAdd = () => {
-		if (props.nodeHoliday.length < 10) {
-			props.addNodeHoliday([...props.nodeHoliday, '']);
-		}
+		props.addNodeHoliday([...props.nodeHoliday, '']);
 	};
 
 	const handleDateRemove = (index) => {
 		const list = [...props.nodeHoliday];
 		list.splice(index, 1);
-		props.addNodeHoliday(list);
+		props.removeNodeHoliday(list);
 	};
 
 	const handleDateChange = (e, index) => {
 		const { value } = e.target;
-		const list = [...props.nodeHoliday];
-		list[index] = structureDate2(value);
+		const list = [...props.nodeHoliday, value];
 		props.addNodeHoliday(list);
 	};
 

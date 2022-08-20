@@ -40,6 +40,7 @@ const OperatingHours = (props) => (
 			<Holidays
 				nodeHoliday={ props.nodeHoliday }
 				addNodeHoliday={ props.addNodeHoliday }
+				removeNodeHoliday = { props.removeNodeHoliday }
 			/>
 		</div>
 	</div>
