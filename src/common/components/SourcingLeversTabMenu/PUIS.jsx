@@ -42,11 +42,6 @@ const styles = {
 };
 
 const PUIS = () => {
-	const disPatch = useDispatch();
-	const {
-		sourcingRules, dataUpdated
-	} = useSelector((s) => s.nodeDetailsSearch);
-
 	const fullFilmentTypecode = 2;
 	const nodePuisSourcingRulesData = useSelector((s) => {
 		return s.nodeFormData.nodeFulfillmentEntity.nodeSourcingRules.find(propType => propType?.fullFillmentType?.fulfillmentTypeCode === fullFilmentTypecode)
@@ -86,13 +81,15 @@ const PUIS = () => {
 	const [sourcing, setSourcing] = useState('off');
 
 	const handleDelivery = (e) => {
-		setDelivery(e.target.value);
-		nodePuisSourcingRulesData.fulfillmentTypeEligibity = (e.target.value === 'true');
+		const delivery = e.target.value === 'true';
+		setDelivery(delivery)
+		nodePuisSourcingRulesData.fulfillmentTypeEligibity = delivery;
 	};
 
 	const handleSourcing = (e) => {
-		setSourcing(e.target.value);
-		nodePuisSourcingRulesData.fulfillmentTypeEnabled = (e.target.value === 'true');
+		const sourcing = e.target.value === 'true';
+		setSourcing(sourcing);
+		nodePuisSourcingRulesData.fulfillmentTypeEnabled = sourcing;
 	};
 
 	// LeadTime
@@ -103,12 +100,12 @@ const PUIS = () => {
 
 	const handleNodeBuffer = (e) => {
 		setNodeBuffer(e.target.value);
-		nodePuisSourcingRulesData.lead_time_details.nodeBuffer = parseInt(e.target.value, 10);
+		nodePuisSourcingRulesData.lead_time_details.nodeBuffer = e.target.value;
 	};
 
 	const handleCutOffTime = (e) => {
 		setCutOffTime(e.target.value);
-		nodePuisSourcingRulesData.lead_time_details.orderEndTime = parseInt(e.target.value, 10);
+		nodePuisSourcingRulesData.lead_time_details.orderEndTime = e.target.value;
 	};
 
 	const handleDays = (e) => {
@@ -126,7 +123,6 @@ const PUIS = () => {
 		nodePuisSourcingRulesData.lead_time_details.mins = e.target.value;
 	};
 
-	const totalTime = ((hours * 60) + parseInt(mins, 10));
 
 	// ATP
 	const [days, setDays] = useState(0);

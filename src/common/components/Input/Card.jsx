@@ -22,7 +22,7 @@ const Card = (props) => {
 				<OperatingHours
 					workingDays={ props.workingDays }
 					nodeHoliday={ props.nodeHoliday }
-					setDates={ props.setDates }
+					addNodeHoliday={ props.addNodeHoliday }
 				/>
 			</section>
 			<section>

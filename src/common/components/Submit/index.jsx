@@ -5,7 +5,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { saveNodeConfigDetails } from '../../services/postNodeDetails';
 import { SubmitDiv } from './style';
 
-const SaveNodeSubmit = (props) => {
+const SaveNodeSubmit = () => {
 
 	const nodeFormData = useSelector((s) => {
 		return s.nodeFormData;

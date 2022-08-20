@@ -45,9 +45,10 @@ const styles = {
 };
 
 function Holidays(props) {
-	const {
-		dataUpdated
-	} = useSelector((s) => s.nodeDetailsSearch);
+
+	const nodeFormData = useSelector((s) => {
+		return s.nodeFormData;
+	});
 
 	const structureDate = (arr) => {
 		const words = arr.split('-');
@@ -64,39 +65,31 @@ function Holidays(props) {
 
 	const structureDate2 = (word) => {
 		const words = word.split('-');
-
 		const first = words[0];
 		const second = words[1];
 		const third = words[2];
 		const temp = `${second}-${third}-${first}`;
-
 		return temp;
 	};
 
 	const handleDateAdd = () => {
 		if (props.nodeHoliday.length < 10) {
-			props.setDates([...props.nodeHoliday, '']);
+			props.addNodeHoliday([...props.nodeHoliday, '']);
 		}
 	};
 
 	const handleDateRemove = (index) => {
 		const list = [...props.nodeHoliday];
 		list.splice(index, 1);
-		props.setDates(list);
+		props.addNodeHoliday(list);
 	};
 
 	const handleDateChange = (e, index) => {
 		const { value } = e.target;
 		const list = [...props.nodeHoliday];
 		list[index] = structureDate2(value);
-		props.setDates(list);
+		props.addNodeHoliday(list);
 	};
-
-	useEffect(() => {
-		//const editedData = dataUpdated;
-		//editedData.nodeHoliday = props.nodeHoliday;
-		// disPatch({ type: 'NODE_DATA_UPDATE', dataUpdated: editedData });
-	}, [props.nodeHoliday]);
 
 	return (
 		<div style={ styles.section }>

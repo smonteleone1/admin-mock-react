@@ -145,32 +145,32 @@ const SourcingLevers = (props) => {
 	const [tabActive, setTabActive] = React.useState('Parcel');
 
 	return (
-		<div style={ styles.container }>
-			<div style={ styles.temp }>
-				<div style={ styles.borderRight }>
-					<div style={ styles.title }> Sourcing Levers </div>
+		<div style={styles.container}>
+			<div style={styles.temp}>
+				<div style={styles.borderRight}>
+					<div style={styles.title}> Sourcing Levers </div>
 				</div>
-				<div style={ styles.tabLayout }>
+				<div style={styles.tabLayout}>
 					<FormControl>
 						<RadioGroup
 							row
 							aria-labelledby="demo-radio-buttons-group-label"
-							defaultValue="female"
+							defaultValue={tabActive}
 							name="radio-buttons-group"
 						>
-							<FormControlLabel value="Parcel" control={ <Radio checked={ tabActive === 'Parcel' } /> } label="Parcel" onClick={ () => setTabActive('Parcel') } />
-							<FormControlLabel value="LTL" control={ <Radio /> } label="LTL" onClick={ () => setTabActive('LTL') } />
-							<FormControlLabel value="PUIS" control={ <Radio /> } label="PUIS" onClick={ () => setTabActive('PUIS') } />
-							<FormControlLabel value="Truck" control={ <Radio /> } label="Truck Delivery" onClick={ () => setTabActive('Truck') } />
+							<FormControlLabel value="Parcel" control={<Radio checked={tabActive === 'Parcel'} />} label="Parcel" onClick={() => setTabActive('Parcel')} />
+							<FormControlLabel value="LTL" control={<Radio />}  checked={tabActive === 'LTL'}  label="LTL" onClick={() => setTabActive('LTL')} />
+							<FormControlLabel value="PUIS" control={<Radio />}  checked={tabActive === 'PUIS'} label="PUIS" onClick={() => setTabActive('PUIS')} />
+							<FormControlLabel value="Truck" control={<Radio />} checked={tabActive === 'Truck'}  label="Truck Delivery" onClick={() => setTabActive('Truck')} />
 						</RadioGroup>
 					</FormControl>
 				</div>
 			</div>
-			<div style={ styles.container2 }>
-				{ (tabActive === 'LTL') ? <LTL  /> : ''}
-				{ (tabActive === 'Parcel') ? <Parcel /> : ''}
-				{ (tabActive === 'PUIS') ? <PUIS  /> : ''}
-				{ (tabActive === 'Truck') ? <Truck  /> : ''}
+			<div style={styles.container2}>
+				{(tabActive === 'LTL') ? <LTL /> : ''}
+				{(tabActive === 'Parcel') ? <Parcel /> : ''}
+				{(tabActive === 'PUIS') ? <PUIS /> : ''}
+				{(tabActive === 'Truck') ? <Truck /> : ''}
 			</div>
 		</div>
 	);

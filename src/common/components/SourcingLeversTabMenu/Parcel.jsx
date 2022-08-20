@@ -110,8 +110,12 @@ const Parcel = () => {
 			if(nodeParcelSourcingRules.lead_time_details && nodeParcelSourcingRules.lead_time_details.nodeBufferDays) {
 				setNodeBuffer(nodeParcelSourcingRules.lead_time_details.nodeBufferDays);
 			}
+			if(nodeParcelSourcingRules.lead_time_details && nodeParcelSourcingRules.lead_time_details.orderCutoffTime) {
+				setCutOffTime(nodeParcelSourcingRules.lead_time_details.orderCutoffTime);
+			}
+
 			if(nodeParcelSourcingRules.lead_time_details && nodeParcelSourcingRules.lead_time_details.orderStartTime) {
-				setCutOffTime(nodeParcelSourcingRules.lead_time_details.orderStartTime);
+				setHours(nodeParcelSourcingRules.lead_time_details.orderStartTime);
 			}
 
 			if(nodeParcelSourcingRules.lead_time_details && nodeParcelSourcingRules.lead_time_details.mins) {
@@ -140,20 +144,17 @@ const Parcel = () => {
 		setNodeCost(e.target.value);
 		nodeFormData.nodeMaster.nodeProcessingCost = e.target.value;
 		nodeParcelSourcingRules.nodeProcessingCost = e.target.value;
-		//disPatch({ type: 'NODE_DATA_UPDATE', data: nodeFormData });
 	};
 
 	const handleNodeWeight = (e) => {
 		setNodeWeight(e.target.value);
 		nodeFormData.nodeMaster.nodeProcessingWeight = e.target.value;
 		nodeParcelSourcingRules.nodeProcessingWeight = e.target.value;
-		//disPatch({ type: 'NODE_DATA_UPDATE', data: nodeFormData });
 	};
 
 	const handleTransWeight = (e) => {
 		nodeFormData.nodeMaster.outboundTransportationWeight = e.target.value;
 		nodeParcelSourcingRules.outboundTransportationWeight = e.target.value;
-		//disPatch({ type: 'NODE_DATA_UPDATE', data: nodeFormData });
 	};
 
 	// Sourcing Setup
@@ -161,43 +162,36 @@ const Parcel = () => {
 	const [sourcing, setSourcing] = useState('off');
 
 	const handleDelivery = (e) => {
-		nodeParcelSourcingRules.fulfillmentTypeEligibity = e.target.value === 'true';
-		nodeFormData.nodeMaster.fulfillmentTypeEligibity = e.target.value === 'true';
-		//disPatch({ type: 'NODE_DATA_UPDATE', data: nodeFormData });
+		const delivery = e.target.value === 'true';
+		setDelivery(delivery)
+		nodeParcelSourcingRules.fulfillmentTypeEligibity = delivery;
 	};
 
 	const handleSourcing = (e) => {
-		nodeParcelSourcingRules.fulfillmentTypeEnabled = e.target.value === 'true';
-		nodeFormData.nodeMaster.fulfillmentTypeEnabled = e.target.value === 'true';
-		//disPatch({ type: 'NODE_DATA_UPDATE', data: nodeFormData });
+		const sourcing = e.target.value === 'true';
+		setSourcing(sourcing);
+		nodeParcelSourcingRules.fulfillmentTypeEnabled = sourcing;
 	};
 
-	
 
 	const handleDays = (e) => {
+		setDays(e.target.value);
 		nodeParcelSourcingRules.lead_time_details.processingTime = e.target.value;
-		nodeFormData.nodeMaster.leadTimeInfo.PARCEL.processingTime = e.target.value;
-		//disPatch({ type: 'NODE_DATA_UPDATE', data: nodeFormData });
 	};
 
-
 	const handleNodeBuffer = (e) => {
+		setNodeBuffer(e.target.value);
 		nodeParcelSourcingRules.lead_time_details.nodeBufferDays = e.target.value;
-		nodeFormData.nodeMaster.leadTimeInfo.PARCEL.nodeBuffer = e.target.value;
-		//disPatch({ type: 'NODE_DATA_UPDATE', data: nodeFormData });
 	};
 
 	const handleCutOffTime = (e) => {
-		nodeParcelSourcingRules.lead_time_details.orderStartTime = e.target.value;
-		nodeFormData.nodeMaster.orderCutoffTime = e.target.value;
-		//disPatch({ type: 'NODE_DATA_UPDATE', data: nodeFormData });
+		setCutOffTime(e.target.value);
+		nodeParcelSourcingRules.lead_time_details.orderCutoffTime = e.target.value;
 	};
 
 	const handleHours = (e) => {
 		setHours(e.target.value);
 		nodeParcelSourcingRules.lead_time_details.orderStartTime = e.target.value;
-		nodeFormData.nodeMaster.orderCutoffTime = e.target.value;
-		//disPatch({ type: 'NODE_DATA_UPDATE', data: nodeFormData });
 	};
 
 	const handleMins = (e) => {

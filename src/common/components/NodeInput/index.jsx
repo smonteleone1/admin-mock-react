@@ -27,17 +27,17 @@ const NodeInput = () => {
 	const disPatch = useDispatch();
 	const {
 		node, latitude, longitude, address, zipcode, city, state, countryCode,
-		nodeType = {} , nodeSubType = {},
+		nodeType = {}, nodeSubType = {},
 		supportedCarriersrvcLvl = []
 	} = useSelector((s) => s.nodeDetailsSearch.data);
 
 	const {
-		dataUpdated, isRequest, sourcingRules
+		isRequest
 	} = useSelector((s) => s.nodeDetailsSearch);
 
 	const nodeFormData = useSelector((s) => {
 		return s.nodeFormData;
-	}); 
+	});
 
 
 	const { nodeTypeList = [] } = useSelector((s) => {
@@ -49,7 +49,7 @@ const NodeInput = () => {
 				}
 			})
 		}
-	}); 
+	});
 	const { nodeSubTypeList = [] } = useSelector((s) => {
 		if (s.nodeTypeDetails && s.nodeTypeDetails.nodeSubTypeInfo && s.nodeTypeDetails.nodeSubTypeInfo.length) {
 			return {
@@ -61,18 +61,20 @@ const NodeInput = () => {
 				})
 			}
 		}
-		return {nodeSubTypeList:[]};
+		return { nodeSubTypeList: [] };
 	});
 
-	// eslint-disable-next-line no-empty-pattern
-	const {  workingDays = [], nodeHoliday= [] } = useSelector((s) => {
+	const { workingDays = [], nodeHoliday = [] } = useSelector((s) => {
+		// if (s.nodeDetailsSearch.data && s.nodeDetailsSearch.data.nodeHoliday) {
+		// 	return { workingDays: s.nodeDetailsSearch.workingDays, nodeHoliday: s.nodeDetailsSearch.data.nodeHoliday };
+		// }
 		if (s.nodeDefaultValues) {
 			return s.nodeDefaultValues.data
 		}
-		return { workingDays:  []};
+		return { workingDays: [], nodeHoliday: [] };
 	});
 
-	
+
 	// Address
 	const [latitudeState, setLatitudeState] = useState('');
 	const [nodeState, setNodeState] = useState('');
@@ -88,7 +90,7 @@ const NodeInput = () => {
 	const [nodeSubtypeState, setNodeSubTypeState] = useState({});
 
 	// Holidays
-	const [dates, setDates] = useState([]);
+	const [nodeHolidays, setNodeHolidays] = useState([]);
 
 	useEffect(() => {
 		disPatch(getNodeTypeDetails());
@@ -108,80 +110,75 @@ const NodeInput = () => {
 		setCountryCodeState(countryCode);
 		nodeFormData.nodeMaster.nodeType = nodeType;
 		nodeFormData.nodeMaster.nodeSubType = nodeSubType;
+		setNodeTypeState({
+			value: nodeType.nodeTypeCode,
+			label: nodeType.shortDescription
+		});
+		setNodeSubTypeState({
+			value: nodeSubType.nodeSubTypeCode,
+			label: nodeSubType.shortDescription
+		});
+		setNodeHolidays(nodeHoliday);
 
-		setNodeTypeState({ value: nodeType.nodeTypeCode,
-			label: nodeType.shortDescription});
-		setNodeSubTypeState({ value: nodeSubType.nodeSubTypeCode,
-			label: nodeSubType.shortDescription});
-		if (dates.length < 8) {
-			const arr = dates.concat(nodeHoliday);
-			setDates(arr);
-		} else {
-			setDates(nodeHoliday);
-		}
-	}, [latitude]);
+	}, []);
 
-	
+
 	const handleLatitude = (e) => {
 		setLatitudeState(e.target.value);
-		const editedData = dataUpdated;
-		editedData.latitude = e.target.value;
-		disPatch({ type: 'NODE_DATA_UPDATE', dataUpdated: editedData });
+		nodeFormData.nodeMaster.latitude = e.target.value;
 	};
 
 	const handleNode = (e) => {
 		setNodeState(e.target.value);
+		nodeFormData.nodeMaster.node = e.target.value;
 	};
 
 	const handleLongitude = (e) => {
 		setLongitudeState(e.target.value);
 		nodeFormData.nodeMaster.longitude = e.target.value;
-		disPatch({ type: 'NODE_DATA_UPDATE', nodeFormData });
 	};
 
 	const handleAddress = (e) => {
 		setAddressState(e.target.value);
 		nodeFormData.nodeMaster.address = e.target.value;
-		disPatch({ type: 'NODE_DATA_UPDATE', nodeFormData });
 	};
 
 	const handleCity = (e) => {
 		setCityState(e.target.value);
 		nodeFormData.nodeMaster.city = e.target.value;
-		disPatch({ type: 'NODE_DATA_UPDATE', nodeFormData });
 	};
 
 	const handleZipCode = (e) => {
 		setZipCodeState(e.target.value);
 		nodeFormData.nodeMaster.zipcode = e.target.value;
-		disPatch({ type: 'NODE_DATA_UPDATE', nodeFormData });
 	};
 
 	const handleStateCode = (e) => {
 		setStateCodeState(e.target.value);
 		nodeFormData.nodeMaster.stateCode = e.target.value;
-		disPatch({ type: 'NODE_DATA_UPDATE', nodeFormData });
 	};
 
 	const handleCountryCode = (e) => {
 		setCountryCodeState(e.target.value);
 		nodeFormData.nodeMaster.countryCode = e.target.value;
-		disPatch({ type: 'NODE_DATA_UPDATE', nodeFormData });
 	};
 
 	const handleNodeTypeState = (e) => {
 		const nodeType = nodeTypeList.find(subType => subType.value === e.target.value);
 		nodeFormData.nodeMaster.nodeType = nodeType;
 		setNodeTypeState(nodeType)
-		disPatch({ type: 'NODE_DATA_UPDATE', nodeFormData });
 	};
 
 	const handleNodeSubTypeState = (e) => {
 		const nodeSubType = nodeSubTypeList.find(subType => subType.value === e.target.value);
 		nodeFormData.nodeMaster.nodeSubType = nodeSubType;
 		setNodeSubTypeState(nodeSubType)
-		disPatch({ type: 'NODE_DATA_UPDATE', nodeFormData });
 	};
+
+	const addNodeHoliday = (e) => {
+		const nodeHoliday = new Date();
+		setNodeHolidays([nodeHoliday]);
+	}
 
 	return (
 		<div>
@@ -219,8 +216,8 @@ const NodeInput = () => {
 				<Card
 					workingDays={workingDays}
 					// nodeHoliday={ nodeHoliday }
-					nodeHoliday={dates}
-					setDates={setDates}
+					nodeHoliday={nodeHolidays}
+					addNodeHoliday={addNodeHoliday}
 					srvcLvl={supportedCarriersrvcLvl}
 				/>
 			</div>

@@ -44,8 +44,6 @@ const LTL = () => {
 	}); 
 
 
-
-
 	//default data update to form
 	useEffect(() => {
 		if(nodeLtlSourcingRules && nodeLtlSourcingRules.nodeProcessingCost) {
@@ -67,14 +65,26 @@ const LTL = () => {
 			setSourcing(nodeLtlSourcingRules.fulfillmentTypeEnabled);
 		}
 
-		if(nodeLtlSourcingRules && nodeLtlSourcingRules.lead_time_details && nodeLtlSourcingRules.lead_time_details.processingTime) {
+		if(nodeLtlSourcingRules && nodeLtlSourcingRules.lead_time_details 
+			&& nodeLtlSourcingRules.lead_time_details.processingTime) {
 			setDays(nodeLtlSourcingRules.lead_time_details.processingTime);
 		}
-		if(nodeLtlSourcingRules && nodeLtlSourcingRules.lead_time_details && nodeLtlSourcingRules.lead_time_details.nodeBuffer) {
+		if(nodeLtlSourcingRules && nodeLtlSourcingRules.lead_time_details 
+			&& nodeLtlSourcingRules.lead_time_details.nodeBuffer) {
 			setNodeBuffer(nodeLtlSourcingRules.lead_time_details.nodeBuffer);
 		}
-		if(nodeLtlSourcingRules && nodeLtlSourcingRules.lead_time_details && nodeLtlSourcingRules.lead_time_details.orderEndTime) {
+		if(nodeLtlSourcingRules && nodeLtlSourcingRules.lead_time_details 
+			&& nodeLtlSourcingRules.lead_time_details.orderEndTime) {
 			setCutOffTime(nodeLtlSourcingRules.lead_time_details.orderEndTime);
+		}
+		if(nodeLtlSourcingRules && nodeLtlSourcingRules.lead_time_details 
+			&& nodeLtlSourcingRules.lead_time_details.hours) {
+			setHours(nodeLtlSourcingRules.lead_time_details.hours);
+		}
+
+		if(nodeLtlSourcingRules && nodeLtlSourcingRules.lead_time_details 
+			&& nodeLtlSourcingRules.lead_time_details.mins) {
+			setMins(nodeLtlSourcingRules.lead_time_details.mins);
 		}
 	}, [nodeLtlSourcingRules]);
 
@@ -102,13 +112,15 @@ const LTL = () => {
 	const [sourcing, setSourcing] = useState('off');
 
 	const handleDelivery = (e) => {
-		setDelivery(e.target.value);
-		nodeLtlSourcingRules.fulfillmentTypeEligibity = (e.target.value === 'true');
+		const delivery = e.target.value === 'true';
+		setDelivery(delivery);
+		nodeLtlSourcingRules.fulfillmentTypeEligibity = delivery;
 	};
 
 	const handleSourcing = (e) => {
-		setSourcing(e.target.value);
-		nodeLtlSourcingRules.fulfillmentTypeEnabled = (e.target.value === 'true');
+		const sourcing = e.target.value === 'true';
+		setSourcing(sourcing);
+		nodeLtlSourcingRules.fulfillmentTypeEnabled = sourcing;
 	};
 
 	// LeadTime
@@ -124,26 +136,25 @@ const LTL = () => {
 
 	const handleCutOffTime = (e) => {
 		setCutOffTime(e.target.value);
-		nodeLtlSourcingRules.lead_time_details.orderEndTime = parseInt(e.target.value, 10);
+		nodeLtlSourcingRules.lead_time_details.orderEndTime = e.target.value;
 	};
 
 	const handleHours = (e) => {
 		setHours(e.target.value);
+		nodeLtlSourcingRules.lead_time_details.hours = e.target.value;
 	};
 
 	const handleMins = (e) => {
 		setMins(e.target.value);
+		nodeLtlSourcingRules.lead_time_details.mins = e.target.value;
 	};
-
-	const totalTime = ((hours * 60) + parseInt(mins, 10));
-
 
 	// ATP
 	const [days, setDays] = useState(0);
 
 	const handleDays = (e) => {
 		setDays(e.target.value);
-		nodeLtlSourcingRules.processingTime = e.target.value;
+		nodeLtlSourcingRules.lead_time_details.processingTime = e.target.value;
 	};
 
 	const [value, setValue] = React.useState('1');
