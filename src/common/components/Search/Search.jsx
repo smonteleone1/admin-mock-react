@@ -6,6 +6,7 @@ import { getNodeDetails } from '../../services';
 
 import { SearchDiv } from './style';
 import { getNodeSourcingRulesByNodeId } from '../../services/getDefaultNodeSourcingRules';
+import { Button } from '@mui/material';
 
 const SearchBar = () => {
 	const [nodeId, setNodeId] = React.useState('');
@@ -16,6 +17,11 @@ const SearchBar = () => {
 		dispatch(getNodeSourcingRulesByNodeId(nodeId));
 	};
 
+	// const handleNodeSubmitDetails = (nodeId) => {
+	// 	dispatch(getNodeDetails(nodeId));
+	// 	dispatch(getNodeSourcingRulesByNodeId(nodeId));
+	// };
+
 	return (
 		<SearchDiv>
 			<form className="search">
@@ -24,7 +30,7 @@ const SearchBar = () => {
 					onChange={(e) => setNodeId(e.target.value)} />
 				
 			</form>
-			{/* <Button onClick={ (e) => handleNodeDetails() } className="btn">Submit</Button> */}
+			{/* <Button onClick={ (e) => handleNodeSubmitDetails(123) } className="btn">Submit</Button> */}
 		</SearchDiv>
 	);
 };

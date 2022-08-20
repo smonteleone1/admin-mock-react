@@ -22,7 +22,7 @@ function saveNodeConfigDetails(nodeData) {
 		dispatch({ type: 'SHOW_NO_ERROR' });
 		const { nodeMaster : { node } } = nodeData;
 		if(node) {
-			APIConfig.get(`/getNodeById1?node=${node}`)
+			APIConfig.get(`/getNodeById?node=${node}`)
 				.then((res) => {
 					const data = ['node info already existed'];
 					dispatch({ type: 'SHOW_ERROR', data });

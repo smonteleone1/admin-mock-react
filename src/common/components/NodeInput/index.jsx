@@ -29,7 +29,9 @@ const NodeInput = () => {
 		node, latitude, longitude, address, zipcode, city, state, countryCode,
 		nodeType = {}, nodeSubType = {},
 		supportedCarriersrvcLvl = []
-	} = useSelector((s) => s.nodeDetailsSearch.data);
+	} = useSelector((s) => {
+		 return s.nodeDetailsSearch.data;
+	});
 
 	const {
 		isRequest
@@ -65,9 +67,9 @@ const NodeInput = () => {
 	});
 
 	const { workingDays = [], nodeHoliday = [] } = useSelector((s) => {
-		// if (s.nodeDetailsSearch.data && s.nodeDetailsSearch.data.nodeHoliday) {
-		// 	return { workingDays: s.nodeDetailsSearch.workingDays, nodeHoliday: s.nodeDetailsSearch.data.nodeHoliday };
-		// }
+		if (s.nodeDetailsSearch.data && s.nodeDetailsSearch.data.nodeHoliday) {
+			return { workingDays: s.nodeDetailsSearch.data.workingDays, nodeHoliday: s.nodeDetailsSearch.data.nodeHoliday };
+		}
 		if (s.nodeDefaultValues) {
 			return s.nodeDefaultValues.data
 		}
@@ -120,7 +122,7 @@ const NodeInput = () => {
 		});
 		setNodeHolidays(nodeHoliday);
 
-	}, []);
+	}, [node]);
 
 
 	const handleLatitude = (e) => {
@@ -177,16 +179,19 @@ const NodeInput = () => {
 
 	const addNodeHoliday = (holidays) => {
 		setNodeHolidays(holidays);
+		nodeFormData.nodeMaster.nodeHolidays = holidays;
 	}
 
 	const removeNodeHoliday = (index) => {
 		nodeHolidays.splice(index, 1);
 		setNodeHolidays([...nodeHolidays]);
+		nodeFormData.nodeMaster.nodeHolidays = nodeHolidays;
 	}
 
 	const updateNodeHoliday = (index,value) => {
-		//nodeHolidays.splice(index, 1);
+		nodeHolidays[index] = new Date(value);
 		setNodeHolidays([...nodeHolidays]);
+		nodeFormData.nodeMaster.nodeHolidays = nodeHolidays;
 	}
 
 	return (

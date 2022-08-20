@@ -12,7 +12,9 @@ function getNodeDetails(nodeId) {
 		APIConfig.get(`/getNodeById?node=${nodeId}`)
 			.then((res) => {
 				const { data } = res;
+				//const nodeMaster = { nodeMaster : data };
 				dispatch({ type: 'INVENTORY_INSIGHTS_SEARCH_SUCCESS', data });
+				//dispatch({ type: 'NODE_MASTER_DATA_UPDATE', data: nodeMaster });
 			}).catch(() => {
 				dispatch({ type: 'NODE-UPDATE_SUCCESS' });
 			});

@@ -48,11 +48,6 @@ const nodeDetailsSearch = (state = initialState, action) => {
 			...state,
 			data: [],
 		};
-	case 'GET_NODE_SOURCING_TYPE_SUCCESS':
-		return {
-			...state,
-			data: action.data,
-		};		
 	case 'UPDATE_NODE_SOURCING_TYPE_SUCCESS':
 		return {
 			...state,

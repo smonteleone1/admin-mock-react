@@ -136,41 +136,31 @@ const styles = {
 
 const Carrier = (props) => {
 	
-	const arr = props.srvcLvl;
+	const nodeFormData = useSelector((s) => {
+		return s.nodeFormData;
+	}); 
+
 
 	const ground = 'GND';
 	const all = 'ALL';
-
-	const [supportsGround, setSupportsGround] = React.useState(props.srvcLvl.includes(ground));
-	const [twoDayShipping, setTwoDayShipping] = React.useState(props.srvcLvl.includes(all));
-
-	const toggleGround = () => setSupportsGround((prev) => !prev);
+	const [supportsGround, setSupportsGround] = React.useState(false);
+	const [twoDayShipping, setTwoDayShipping] = React.useState(false);
+	const toggleGround = () =>  {
+		if(supportsGround) {
+			nodeFormData.nodeMaster.supportedCarriersrvcLvl = ['GND']
+		} else {
+			nodeFormData.nodeMaster.supportedCarriersrvcLvl = ['ALL']
+		}
+		return setSupportsGround((prev) => !prev);
+	}
 	const toggleTwoDay = () => setTwoDayShipping((prev) => !prev);
 
 	useEffect(() => {
-		if (supportsGround) {
-			if (!arr.includes(ground)) {
-				arr.push(ground);
-			}
-		} else {
-			const index = arr.indexOf(ground);
-			if (index > -1) { // only splice array when item is found
-				arr.splice(index, 1); // 2nd parameter means remove one item only
-			}
+		if(props.srvcLvl && props.srvcLvl.length) {
+			setSupportsGround(props.srvcLvl.indexOf(ground)>=0);
+			setTwoDayShipping(props.srvcLvl.indexOf(all)>=0);
 		}
-
-		if (twoDayShipping) {
-			if (!arr.includes(all)) {
-				arr.push(all);
-			}
-		} else {
-			const index = arr.indexOf(all);
-			if (index > -1) { // only splice array when item is found
-				arr.splice(index, 1); // 2nd parameter means remove one item only
-			}
-		}
-	
-	}, [supportsGround, twoDayShipping]);
+	}, [props.srvcLvl]);
 
 	const [weekStart, setWeekStart] = React.useState('06:00');
 	const [weekEnd, setWeekEnd] = React.useState('08:00');
@@ -178,7 +168,6 @@ const Carrier = (props) => {
 	const [weekendStart, setWeekendStart] = React.useState('');
 	const [weekendEnd, setWeekendEnd] = React.useState('');
 
-	// const [openPopup, setOpenPopup] = React.useState(false);
 
 	const [closed, setClosed] = React.useState(true);
 	const toggleClosed = () => setClosed((prev) => !prev);
@@ -280,6 +269,7 @@ const Carrier = (props) => {
 					
 						<span style={ styles.flex }>
 							<Checkbox value={ supportsGround }
+								checked = {supportsGround}
 								onChange={ toggleGround }
 								style={ styles.check }
 							/>
@@ -287,6 +277,7 @@ const Carrier = (props) => {
 						</span>
 						<span style={ styles.flex }>
 							<Checkbox value={ twoDayShipping }
+								checked = {twoDayShipping}
 								onChange={ toggleTwoDay }
 								style={ styles.check }
 							/>

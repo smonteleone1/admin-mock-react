@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 // import { TextField } from '@backyard/react';
 import DeleteIcon from '@mui/icons-material/Delete';
 import Icon from '@mui/material/Icon';
-import { useSelector } from 'react-redux';
 import moment from 'moment'
+import { useSelector } from 'react-redux';
 
 
 const styles = {
@@ -48,14 +48,24 @@ const styles = {
 
 function Holidays(props) {
 
+	const nodeFormData = useSelector((s) => {
+		return s.nodeFormData;
+	}); 
+
+	useEffect(() => {
+		nodeFormData.nodeMaster.nodeHolidays = props.nodeHoliday;
+	});
+
 	const formatDate = (holiday) => {		
-		const formatedDate =  moment(new Date()).format("YYYY-MM-DD").toString();
+		const formatedDate =  moment(holiday).format("YYYY-MM-DD").toString();
 		return formatedDate;
 	};
 	
 
 	const handleDateAdd = () => {
-		props.addNodeHoliday([...props.nodeHoliday, new Date()]);
+		if(props.nodeHoliday.length <10) {
+			props.addNodeHoliday([...props.nodeHoliday, new Date()]);
+		}
 	};
 
 	const handleDateRemove = (index) => {
@@ -91,7 +101,9 @@ function Holidays(props) {
 							<input
 								// value={ date.date }
 								value={ formatDate(date) }
-								onChange={ (e) => handleDateChange(e, index) }
+								onChange={ (e) =>  {
+									handleDateChange(e,index)
+								 } }
 								type="date"
 								style={ styles.border }
 								className="border"

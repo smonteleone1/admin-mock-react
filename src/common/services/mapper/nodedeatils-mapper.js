@@ -1,6 +1,10 @@
+import moment from 'moment'
+
 const mapNodeDetails = (nodeData) => {
+	debugger;
 	const response = {
 		...nodeData.nodeMaster,
+		nodeHolidays: mapNodeHolidays(nodeData.nodeMaster.nodeHolidays),
 		leadTimeInfo : {
 			"PARCEL" : getParcelSourceLevellInfo(nodeData,4),
 			"PUIS" : getParcelSourceLevellInfo(nodeData,2),
@@ -9,6 +13,10 @@ const mapNodeDetails = (nodeData) => {
 		}
 	};
 	return response;
+}
+
+const mapNodeHolidays = (nodeHolidays) => {
+	return nodeHolidays && nodeHolidays.length ? nodeHolidays.map(nodeHoliday => moment(nodeHoliday).format("YYYY-MM-DD")) : []
 }
 
 const getParcelSourceLevellInfo = (nodeData, fullFilmentTypecode) => {

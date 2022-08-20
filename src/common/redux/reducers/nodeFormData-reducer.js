@@ -19,8 +19,14 @@ const nodeFormData = (state = initialState, action) => {
 		return {
 			...state,
 			...action.data,
-			//dataUpdated: action.dataUpdated
 		};   
+
+	case 'NODE_MASTER_DATA_UPDATE': {
+		return {
+			...state,
+			...action.data,
+		};   		
+	}
 	default: return state;
 	}
 }

@@ -10,7 +10,6 @@ function getDefaultNodeSourcingRules() {
 				const { data } = res;
 				const nodeSourcingRulesData = { nodeFulfillmentEntity: { nodeSourcingRules: data }} ;
 				dispatch({ type: 'NODE_DATA_UPDATE', data: nodeSourcingRulesData });
-				dispatch({ type: 'GET_NODE_SOURCING_TYPE_SUCCESS', data });
 			}).catch(() => {
 				dispatch({ type: 'UPDATE_NODE_SOURCING_TYPE_SUCCESS' });
 			});
@@ -27,7 +26,6 @@ function getNodeSourcingRulesByNodeId(nodeId) {
 				const { data } = res;
 				const nodeSourcingRulesData = { nodeFulfillmentEntity: { nodeSourcingRules: data }} ;
 				dispatch({ type: 'NODE_DATA_UPDATE', data: nodeSourcingRulesData });
-				dispatch({ type: 'GET_NODE_SOURCING_TYPE_SUCCESS', data });
 			}).catch(() => {
 				dispatch({ type: 'UPDATE_NODE_SOURCING_TYPE_SUCCESS' });
 			});
