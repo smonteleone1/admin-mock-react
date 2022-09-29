@@ -1,9 +1,0 @@
-export declare const configure: (clientConfig: any) => void;
-export declare const trackError: (...args: any[]) => any;
-export declare const setUser: (...args: any[]) => any;
-export declare const setStore: (...args: any[]) => any;
-export declare const setRelease: (...args: any[]) => any;
-export declare const setPageDetails: (...args: any[]) => any;
-export declare const trackEvent: (...args: any[]) => any;
-export declare const trackClick: (eventName: any, payload: any) => void;
-export declare const trackNavigation: (eventName: any, payload: any) => void;

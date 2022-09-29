@@ -1,8 +1,0 @@
-{
-  "@lowes/create-node-module": {
-    "promptValues": {
-      "authorName": "cdavalu",
-      "authorEmail": "cdavalu@lowes.com"
-    }
-  }
-}
